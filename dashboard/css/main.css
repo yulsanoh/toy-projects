@@ -1,0 +1,72 @@
+body, ul, p {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 95%;
+  background-color: skyblue;
+  height: 100%;
+}
+
+.main-nav {
+  width: calc(100% - 36px);
+  height: 52px;
+  margin-left: 36px;
+  background-color: #eee;
+}
+
+.main-nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.main-nav-input-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 192px;
+}
+
+.main-nav-input-wrap i {
+  max-width: 50px;
+  padding: 10px;
+  background-color: #333940;
+  border: 1px solid #333940;
+  border-radius: 0 5px 5px 0;
+  color: white;
+}
+
+.main-nav-input-wrap input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #EAECF0;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+.main-nav-input-wrap input:focus {
+  width: 400px;
+}
+
+.sub-nav {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 136px;
+  height: 100vh;
+  background-color: blue;
+  transform: translateX(-100px);
+}/*# sourceMappingURL=main.css.map */
