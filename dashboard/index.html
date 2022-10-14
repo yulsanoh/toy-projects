@@ -7,11 +7,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header>
       <nav class="sub-nav">
-        <div class="sub-container"></div>
+        <div class="sub-container">
+          <ul>
+            <li>
+              <i class="fas fa-home"></i>
+              <p>Home</p>
+            </li>
+            <li>
+              <i class="fas fa-headphones"></i>
+              <p>Services</p>
+            </li>
+            <li>
+              <i class="fas fa-flag"></i>
+              <p>Alert</p>
+            </li>
+            <li>
+              <i class="fas fa-chart-pie"></i>
+              <p>Stats</p>
+            </li>
+          </ul>
+        </div>
       </nav>
       <nav class="main-nav">
         <div class="container">
@@ -22,15 +42,128 @@
             </div>
             <div class="main-nav-menu">
               <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                <li>
+                  <i class="fa-solid fa-bell">
+                    <div class="alert">5</div>
+                  </i>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope">
+                    <div class="alert">9</div>
+                  </i>
+                </li>
+                <li>Yulsan Oh</li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="container">
+        <h1>Dashboard</h1>
+        <div class="dashboard-items">
+          <div class="upper-items">
+            <div class="item-skyblue">
+              <div class="item-inner">
+                <div class="item-inner-left">
+                  <p>Earnings (Monthly)</p>
+                  <h3>$400,000</h3>
+                </div>
+                <div class="item-inner-icon">
+                  <i class="fa-solid fa-calendar fa-3x"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item-green">
+              <div class="item-inner">
+                <div class="item-inner-left">
+                  <p>Earnings (Annual)</p>
+                  <h3>$800,000</h3>
+                </div>
+                <div class="item-inner-icon">
+                  <i class="far fa-dollar-sign fa-3x"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item-blue">
+              <div class="item-inner">
+                <div class="item-inner-left">
+                  <p>Tasks</p>
+                  <h3>13</h3>
+                </div>
+                <div class="item-inner-icon">
+                  <i class="fas fa-tasks fa-3x"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item-yellow">
+              <div class="item-inner">
+                <div class="item-inner-left">
+                  <p>Requests</p>
+                  <h3>26</h3>
+                </div>
+                <div class="item-inner-icon">
+                  <i class="fas fa-comments fa-3x"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="under-items">
+            <div class="chart">
+              <div class="chart-inner">
+                <h3>Earnings Overview</h3>
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="task">
+              <div class="task-header">
+                <h3>Tasks</h3>
+              </div>
+              <div class="task-lists">
+                <div class="task-list-item">
+                  <p>Borrowed Items</p>
+                  <p class="badge">14</p>
+                </div>
+                <div class="task-list-item">
+                  <p>Trello requests</p>
+                  <p class="badge">2</p>
+                </div>
+                <div class="task-list-item">
+                  <p>Marked Commets</p>
+                  <p class="badge">1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              backgroundColor: "rgba(255, 99, 132, 0.2)",
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
