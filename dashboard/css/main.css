@@ -61,12 +61,6 @@ canvas {
   height: 100%;
 }
 
-.main-nav-input-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 200px;
-}
 .main-nav-input-wrap i {
   max-width: 50px;
   padding: 10px;
@@ -75,9 +69,11 @@ canvas {
   border-radius: 0 5px 5px 0;
   color: white;
   cursor: pointer;
+  float: left;
 }
 .main-nav-input-wrap input {
-  width: 100%;
+  width: 180px;
+  float: left;
   padding: 10px;
   border: 1px solid #EAECF0;
   border-radius: 5px 0 0 5px;
@@ -86,7 +82,7 @@ canvas {
   transition: width 1s;
 }
 .main-nav-input-wrap input:focus {
-  width: 400px;
+  width: 300px;
 }
 
 .main-nav-menu ul {

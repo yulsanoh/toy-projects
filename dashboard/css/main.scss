@@ -62,11 +62,6 @@ canvas {
 }
 
 .main-nav-input-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 200px;
-
   i {
     max-width: 50px;
     padding: 10px;
@@ -75,10 +70,12 @@ canvas {
     border-radius: 0 5px 5px 0;
     color: white;
     cursor: pointer;
+    float: left;
   }
 
   input {
-    width: 100%;
+    width: 180px;
+    float: left;
     padding: 10px;
     border: 1px solid #EAECF0;
     border-radius: 5px 0 0 5px;
@@ -88,7 +85,7 @@ canvas {
   }
 
   input:focus {
-    width: 400px;
+    width: 300px;
   }
 }
 
